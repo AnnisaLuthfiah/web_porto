@@ -1,5 +1,5 @@
 <!-- resources/views/projects/show.blade.php -->
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -10,4 +10,4 @@
 
     <a href="{{ route('projects.index') }}" class="btn btn-secondary">Kembali ke Daftar Proyek</a>
 </div>
-@endsection
+@endsection -->
