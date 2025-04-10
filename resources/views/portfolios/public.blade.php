@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container py-5">
-    <h2 class="text-center mb-4">Portofolio Publik</h2>
+    <h2 class="text-center mb-4">My Portfolio</h2>
 
     <div class="row">
         @foreach($portfolios as $portfolio)
