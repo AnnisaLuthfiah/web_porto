@@ -57,7 +57,6 @@
     }
 
     .sidebar a {
-      color: var(--text-light);
       font-size: 1.5rem;
       margin: 20px 0;
       text-align: center;
@@ -67,6 +66,16 @@
 
     .sidebar a:hover {
       opacity: 1;
+    }
+
+    .sidebar a i {
+      color: #ffe0ed;
+      transition: 0.3s ease;
+    }
+
+    .sidebar a:hover i {
+      color: #ffffff;
+      transform: scale(1.15);
     }
 
     .main-content {
@@ -90,6 +99,11 @@
       text-decoration: underline;
     }
 
+    .navbar-brand {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
     .card {
       background-color: rgba(255, 255, 255, 0.85);
       border: 1px solid #d47d9d;
@@ -98,13 +112,17 @@
     }
 
     .btn-outline-light {
-      border-color: var(--primary-pink);
-      color: var(--primary-pink);
+      border-color: #ffffff;
+      color: #ffffff;
+      font-weight: 500;
+      transition: 0.3s;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     }
 
     .btn-outline-light:hover {
-      background-color: var(--primary-pink);
-      color: white;
+      background-color: #ffffff;
+      color: #c74375;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
     }
 
     [data-bs-theme="dark"] .card {
@@ -118,6 +136,17 @@
     [data-bs-theme="dark"] a:hover {
       color: #ff6ea1;
     }
+
+    @keyframes flyUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.5);
+      }
+    }
   </style>
 
   <!-- Auto Theme Script -->
@@ -130,20 +159,19 @@
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-  <a href="{{ route('home') }}" title="Home"><i class="bi bi-house-door-fill"></i></a>
-  <a href="{{ route('about') }}" title="About"><i class="bi bi-person-fill"></i></a>
-  <a href="{{ route('contact') }}" title="Contact"><i class="bi bi-envelope-fill"></i></a>
-  <a href="{{ route('games') }}" title="Games"><i class="bi bi-controller"></i></a>
-  <a href="{{ route('blog') }}" title="Blog"><i class="bi bi-journal-text"></i></a>
-</div>
-
+    <a href="{{ route('home') }}" title="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="{{ route('about') }}" title="About"><i class="bi bi-person-fill"></i></a>
+    <a href="{{ route('contact') }}" title="Contact"><i class="bi bi-envelope-fill"></i></a>
+    <a href="{{ route('games') }}" title="Games"><i class="bi bi-controller"></i></a>
+    <a href="{{ route('blog') }}" title="Blog"><i class="bi bi-journal-text"></i></a>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark mb-4">
     <div class="container-fluid">
-    <a class="navbar-brand fw-bold fs-4 px-2" href="{{ route('portfolio.public') }}">My Portfolio</a>
+      <a class="navbar-brand fw-bold fs-4 px-2" href="{{ route('home') }}">My Portfolio</a>
       <div class="d-flex align-items-center">
-        <a class="nav-link" href="{{ route('profile') }}"><i class="bi bi-person-circle fs-4"></i></a>
+        <a class="nav-link" href="{{ route('admin.home') }}"><i class="bi bi-person-circle fs-4"></i></a>
         <button class="btn btn-sm btn-outline-light ms-2" onclick="toggleTheme()">Toggle Mode</button>
       </div>
     </div>
@@ -177,6 +205,22 @@
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-bs-theme', newTheme);
     }
+  </script>
+
+  <!-- Heart Animation Script -->
+  <script>
+    document.addEventListener('click', function (e) {
+      const heart = document.createElement('div');
+      heart.innerHTML = '❤️';
+      heart.style.position = 'absolute';
+      heart.style.left = (e.pageX - 10) + 'px';
+      heart.style.top = (e.pageY - 10) + 'px';
+      heart.style.fontSize = '24px';
+      heart.style.animation = 'flyUp 1s ease-out forwards';
+      heart.style.pointerEvents = 'none';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    });
   </script>
 </body>
 </html>

@@ -21,9 +21,19 @@ class PortfolioController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        Portfolio::create($request->all());
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images/portfolios'), $imageName);
+            $data['image'] = $imageName;
+        }
+        
+        Portfolio::create($data);
+
         return redirect()->route('admin.portfolios.index')->with('success', 'Data berhasil ditambah');
     }
 
@@ -35,14 +45,42 @@ class PortfolioController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
-
-        $portfolio->update($request->all());
+    
+        $data = $request->all();
+    
+        if ($request->hasFile('image')) {
+            
+            if ($portfolio->image && file_exists(public_path('images/portfolios/' . $portfolio->image))) {
+                unlink(public_path('images/portfolios/' . $portfolio->image));
+            }
+    
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images/portfolios'), $imageName);
+            $data['image'] = $imageName;
+        }
+    
+        $portfolio->update($data);
+    
         return redirect()->route('admin.portfolios.index')->with('success', 'Data berhasil diupdate');
     }
-
+    
     public function destroy(Portfolio $portfolio) {
+        
+        if ($portfolio->image && file_exists(public_path('images/portfolios/' . $portfolio->image))) {
+            unlink(public_path('images/portfolios/' . $portfolio->image));
+        }
+    
         $portfolio->delete();
+    
         return redirect()->route('admin.portfolios.index')->with('success', 'Data berhasil dihapus');
+
     }
+
+    public function show($id)
+        {
+        $portfolio = Portfolio::findOrFail($id);
+        return view('admin.portfolios.show', compact('portfolio'));
+    }   
 }
