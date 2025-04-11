@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
 use App\Http\Controllers\ContactController; 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\GameController;
+
 
 // Home (halaman utama langsung ke home)
 Route::get('/', function () {
@@ -26,9 +28,8 @@ Route::get('/contact', function () {
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 // Games
-Route::get('/games', function () {
-    return view('public.games');
-})->name('games');
+Route::get('/games', [GameController::class, 'index'])->name('games');
+
 
 // Blog
 Route::get('/blog', function () {

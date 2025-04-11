@@ -8,17 +8,29 @@
     </div>
 
     @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
+    <div id="alert-success" style="background-color: #fce4ec; color: #880e4f; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; position: relative;">
+        {{ session('success') }}
+        <button onclick="document.getElementById('alert-success').style.display='none'" 
+                style="position: absolute; top: 8px; right: 12px; background: transparent; border: none; color: #880e4f; font-size: 18px; font-weight: bold; cursor: pointer;">
+            &times;
+        </button>
+    </div>
+@endif
 
-    @if(session('error'))
-        <div class="alert alert-danger">{{ session('error') }}</div>
-    @endif
+@if(session('error'))
+    <div id="alert-error" style="background-color: #ffebee; color: #c62828; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; position: relative;">
+        {{ session('error') }}
+        <button onclick="document.getElementById('alert-error').style.display='none'" 
+                style="position: absolute; top: 8px; right: 12px; background: transparent; border: none; color: #c62828; font-size: 18px; font-weight: bold; cursor: pointer;">
+            &times;
+        </button>
+    </div>
+@endif
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
+            <div class="card shadow-sm" style="border: 1px solid #f8bbd0;">
+                <div class="card-body" style="background-color: #fff0f5;">
                     <h5 class="card-title">Formulir Kontak</h5>
                     <form action="{{ route('contact.send') }}" method="POST">
                         @csrf
@@ -54,7 +66,9 @@
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        <button type="submit" style="background-color: #f8bbd0; color: white; border: none; padding: 10px 20px; border-radius: 6px;">
+                            Kirim Pesan
+                        </button>
                     </form>
                 </div>
             </div>

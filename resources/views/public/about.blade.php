@@ -112,7 +112,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Tentang OC</h5>
-                    <p>Mey adalah avatar dunia maya-ku, seorang pelajar SMA yang periang dan ceria. Mey sangat menyukai musik, seni, dan memiliki semangat tinggi menjalani hidupnya. Dia selalu berusaha membawa warna dan inspirasi ke dalam setiap hal yang dia lakukan.</p>
+                    <p>Mey adalah avatar dunia maya-ku, Dia seorang pelajar SMA yang periang dan ceria. Mey sangat menyukai musik, seni, dan memiliki semangat tinggi menjalani hidupnya. Dia selalu berusaha membawa warna dan inspirasi ke dalam setiap hal yang dia lakukan.</p>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Perjalanan Mey</h5>
-                    <p>Mey memulai petualangannya sebagai builder pemula di Minecraft. Seiring waktu, dia menjelajah server kreatif dan membangun dunia cerita, kastil, hingga makhluk fantasi. Mey percaya bahwa imajinasi adalah kekuatan terbesar dalam menciptakan sesuatu yang luar biasa di dunia maya.</p>
+                    <p>Mey memulai petualangannya sebagai builder pemula di Minecraft. Seiring waktu, dia menjelajah server kreatif dan membangun dunia cerita, kastil, hingga makhluk fantasi, hingga sampai di masa sekarang. Mey percaya bahwa imajinasi adalah kekuatan terbesar dalam menciptakan sesuatu yang luar biasa di dunia maya.</p>
                 </div>
             </div>
         </div>

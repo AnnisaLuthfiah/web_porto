@@ -19,7 +19,7 @@ class ContactController extends Controller
 
         // Kirim email (gunakan Mail yang sudah dikonfigurasi di .env)
         try {
-            Mail::to('youremail@example.com')->send(new \App\Mail\ContactMail($request->all()));
+            Mail::to('annisaluthfiahrahmah345@gmail.com')->send(new \App\Mail\ContactMail($request->all()));
             return redirect()->route('contact')->with('success', 'Pesan Anda telah dikirim!');
         } catch (\Exception $e) {
             return redirect()->route('contact')->with('error', 'Terjadi kesalahan, pesan tidak dapat dikirim.');

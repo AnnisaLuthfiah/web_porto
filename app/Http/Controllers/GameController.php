@@ -10,10 +10,30 @@ class GameController extends Controller
     {
         $real = [
             [
-                'filename' => 'sertifikat_real.jpg',
-                'title' => 'Sertifikat Minecraft Builder Resmi',
-                'description' => 'Sertifikat penghargaan untuk [Nama Asli] atas partisipasi dalam event resmi Minecraft Building.',
-            ]
+                'filename' => 'IMG_20240313_172200 (1).png',
+                'title' => 'Sertifikat Pelatihan HTML & CSS',
+                'description' => 'Diselesaikan pada Maret 2024.',
+            ],
+            [
+                'filename' => 'E-Certificate - Mey.png',
+                'title' => 'Sertifikat Event RRQ Minecraft Season 2',
+                'description' => 'Sertifikat Penghargaan dalam event yang diadakan oleh RRQ di dalam game Minecraft, Event Bedwars competitive pada tanggal 18 Juni 2023.',
+            ],
+            [
+                'filename' => 'sertifikat3.png',
+                'title' => 'Sertifikat Bootcamp B',
+                'description' => 'Diterbitkan oleh Dicoding Academy.',
+            ],
+            [
+                'filename' => 'sertifikat4.png',
+                'title' => 'Sertifikat Seminar C',
+                'description' => 'Tema: Teknologi AI dan Masa Depan.',
+            ],
+            [
+                'filename' => 'sertifikat5.png',
+                'title' => 'Sertifikat Freelance Project',
+                'description' => 'Pembuatan Website UMKM 2023.',
+            ],
         ];
 
         $oc = [
@@ -34,6 +54,6 @@ class GameController extends Controller
             ],
         ];
 
-        return view('game', compact('real', 'oc'));
+        return view('public.games', compact('real', 'oc'));
     }
 }
