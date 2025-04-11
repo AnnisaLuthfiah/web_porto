@@ -38,9 +38,9 @@ class GameController extends Controller
 
         $oc = [
             [
-                'filename' => 'oc1.jpg',
-                'title' => 'Karya OC - Istana Awan',
-                'description' => 'Bangunan fantasi buatan karakter OC-ku.',
+                'filename' => 'MeyBackground.png',
+                'title' => 'Swargaloka',
+                'description' => 'Bangunan fantasi Kastil tempat tinggalnya para dewa dan dewi dalam cerita Roleplay Minecraft Cakrawala Majapahit',
             ],
             [
                 'filename' => 'oc2.jpg',
