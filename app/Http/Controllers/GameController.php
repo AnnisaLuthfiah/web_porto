@@ -20,19 +20,19 @@ class GameController extends Controller
                 'description' => 'Sertifikat Penghargaan dalam event yang diadakan oleh RRQ di dalam game Minecraft, Event Bedwars competitive pada tanggal 18 Juni 2023.',
             ],
             [
-                'filename' => 'sertifikat3.png',
-                'title' => 'Sertifikat Bootcamp B',
-                'description' => 'Diterbitkan oleh Dicoding Academy.',
+                'filename' => 'sertifikat_rrq_minetourn_mey.png',
+                'title' => 'Sertifikat Event RRQ Minecraft Season 3',
+                'description' => 'Sertifikat Penghargaan dalam event yang diadakan oleh RRQ di dalam game Minecraft, Event Bedwars competitive pada tanggal 7 Oktober 2023.',
             ],
             [
-                'filename' => 'sertifikat4.png',
-                'title' => 'Sertifikat Seminar C',
-                'description' => 'Tema: Teknologi AI dan Masa Depan.',
+                'filename' => 'Sertifikat_RRQ_Minetourn_S4_-_Annisa_Luthfiah_page-0001.jpg',
+                'title' => 'Sertifikat Event RRQ Minecraft Season 4',
+                'description' => 'Sertifikat Penghargaan dalam event yang diadakan oleh RRQ di dalam game Minecraft, Event Bedwars competitive pada tanggal 24 Desember 2023.',
             ],
             [
-                'filename' => 'sertifikat5.png',
-                'title' => 'Sertifikat Freelance Project',
-                'description' => 'Pembuatan Website UMKM 2023.',
+                'filename' => 'Piagam_Penghargaan_-_annisa_page-0001.jpg',
+                'title' => 'Sertifikat Museum Khatulistitwa',
+                'description' => 'Sertifikat Penghargaan dari Biennale Jogja, karena telah berkontribusi dalam projek Minecraft kesenian Museum Khatulisitwa pada tanggal 15 November 2021.',
             ],
         ];
 
@@ -40,17 +40,47 @@ class GameController extends Controller
             [
                 'filename' => 'MeyBackground.png',
                 'title' => 'Swargaloka',
-                'description' => 'Bangunan fantasi Kastil tempat tinggalnya para dewa dan dewi dalam cerita Roleplay Minecraft Cakrawala Majapahit',
+                'description' => 'Bangunan fantasi Kastil, tempat tinggalnya para dewa dan dewi dalam cerita Roleplay Minecraft Cakrawala Majapahit',
             ],
             [
-                'filename' => 'oc2.jpg',
-                'title' => 'Render Animasi OC',
-                'description' => 'Render animasi cinematic world yang dibuat untuk trailer OC.',
+                'filename' => 'Organic__Mey_.png',
+                'title' => 'Halloween Building',
+                'description' => 'Bangunan fantasi dengan tema halloween.',
             ],
             [
-                'filename' => 'sertifikat_oc.jpg',
-                'title' => 'Sertifikat Event OC',
-                'description' => 'Sertifikat penghargaan OC dalam event komunitas Minecraft RP.',
+                'filename' => '16939826_enlarged-1.jpg',
+                'title' => 'Spawn Lobby Minecraft RRQ Season 4.',
+                'description' => 'Bangunan Spawn lobby kastil dalam event tournament bedwars RRQ season 4.',
+            ],
+            [
+                'filename' => 'Hari_ibu.png',
+                'title' => 'Ibu dan Anak',
+                'description' => 'Bangunan  Anak yang sedang pamitan dengan ibunya di dapur.',
+            ],
+            [
+                'filename' => 'unknown-38.png',
+                'title' => 'Cyberpunk Building',
+                'description' => 'Bangunan dengan tema Masa depan (Cyberpunk).',
+            ],
+            [
+                'filename' => '17605206_enlarged-1.jpg',
+                'title' => 'Spawn Lobby Server WaduhSMP',
+                'description' => 'bangunan Spawn lobby yang dipakai dalam server WaduhSMP dengan tema pokemon.',
+            ],
+            [
+                'filename' => '15348010_enlarged-1.jpg',
+                'title' => 'Painter Organic',
+                'description' => 'bangunan anak kecil yang suka melukis.',
+            ],
+            [
+                'filename' => '17213306_thumb-1.jpg',
+                'title' => 'CRAFTABLE HOUSE 2',
+                'description' => 'Komisi building Marketplace di Minecraft Bedrock yang dibuat oleh Firegames.',
+            ],
+            [
+                'filename' => '16918662_thumb-1.jpg',
+                'title' => 'Milionailre World',
+                'description' => 'Komisi building Marketplace di Minecraft Bedrock yang dibuat oleh Firegames.',
             ],
         ];
 
